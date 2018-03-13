@@ -1,0 +1,5 @@
+Bug Report
+The first bug is on line 134 of the Appt.java file. The line is “this.startHour = startMinute;” inside the setStartHour function. This is a bug because the function is supposed to set the start hour member variable to the argument that is passed into the function, but instead it sets it to the start minute member variable. This bug was found in a test case that tests if calling functions like setStartHour actually changes the start hour member variable.
+
+The second bug is on line 115 of the Appt.java file. The line “if(startHour<0 || startHour>24)” inside the isValid function. This is a bug because 24 for the start hour should be an invalid start hour since its 0 based. Thus 24 should be outside the range of valid start hours, but the check allows it. This bug was found in a test case that makes sure that the boundaries for member variables in the isValid function make the function return false.
+
